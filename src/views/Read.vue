@@ -4,14 +4,14 @@
     <div class="container">
       <div class="row my-3" id="read">
         <div class="col-md-12">
-          <img class="img-fluid rounded-0" v-if="article.imageUrl" :src="article.imageUrl" alt="...">
-          <hr>
-          <h5 class="mt-4">{{article.title}}</h5>
-          <p class="small">{{created}} | {{article.category}}</p>
-          <hr>
-          <p v-html="article.content"></p>
-          <hr>
-          <router-link :to="{ name: 'blog'}" class="btn btn-link btn-sm text-uppercase"><i
+          <img class="img-fluid rounded-0 animated fadeIn" v-if="article.imageUrl" :src="article.imageUrl" alt="...">
+          <hr class="animated fadeIn">
+          <h5 class="mt-4 animated fadeInUp">{{article.title}}</h5>
+          <p class="small animated fadeInUp">{{created}} | {{article.category}}</p>
+          <hr class="animated fadeIn">
+          <p class="animated fadeInUp" v-html="article.content"></p>
+          <hr class="animated fadeIn">
+          <router-link :to="{ name: 'blog'}" class="btn btn-link btn-sm text-uppercase animated fadeInUp"><i
               class="fas fa-long-arrow-alt-left"></i> Back</router-link>
         </div>
       </div>

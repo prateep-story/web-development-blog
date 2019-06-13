@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row my-3">
         <div class="col-md-8">
-          <div class="card border-0 mb-4" v-bind:key="id" v-for="(article, id) in articles">
+          <div class="card border-0 mb-4 animated fadeInUp" v-bind:key="id" v-for="(article, id) in articles">
             <img class="card-img-top rounded-0" v-if="article.imageUrl" :src="article.imageUrl" alt="...">
             <div class="card-body px-0">
               <h5 class="card-title">{{article.title}}</h5>
@@ -18,7 +18,7 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-4">
-              <button class="btn btn-outline-primary btn-block rounded-0 text-uppercase" v-if="articles.length"
+              <button class="btn btn-outline-primary btn-block rounded-0 text-uppercase animated fadeInUp" v-if="articles.length"
                 v-on:click="loadMore()">
                 Load more <i class="fas fa-caret-down"></i>
               </button>
@@ -26,7 +26,7 @@
           </div>
         </div>
         <div class="col-md-4 d-none d-sm-block">
-          <div class="right-sidebar" v-if="articles.length">
+          <div class="right-sidebar animated fadeInUp" v-if="articles.length">
             <div id="avatar" class="text-center">
               <img src="../assets/avatar.jpg" class="rounded-circle mx-auto d-block my-3" width="200px" alt="...">
               <h3 class="card-title text-center text-uppercase mb-2">ประทีป อุ่นอก</h3>
