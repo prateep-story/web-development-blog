@@ -4,8 +4,10 @@ import firebase from 'firebase'
 
 import Home from './views/Home.vue'
 import Blog from './views/Blog.vue'
+import Category from './views/Category.vue'
 import Read from './views/Read.vue'
 import About from './views/About.vue'
+import Resume from './views/Resume.vue'
 import Login from './views/Login.vue'
 import ArticleList from './views/articles/Index.vue'
 import CreateArticle from './views/articles/Create.vue'
@@ -29,6 +31,11 @@ const router = new Router({
       component: Blog
     },
     {
+      path: '/category',
+      name: 'category',
+      component: Category
+    },
+    {
       path: '/read',
       name: 'read',
       component: Read
@@ -37,6 +44,11 @@ const router = new Router({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/resume',
+      name: 'resume',
+      component: Resume
     },
     {
       path: '/login',

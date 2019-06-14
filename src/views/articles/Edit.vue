@@ -48,15 +48,15 @@
                 :init="initValue" rows="20" id="editor"></editor>
             </div>
             <div class="form-group">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="status" id="publish" v-bind:value="true"
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="publish" name="status" v-bind:value="true"
                   v-model="status" checked>
-                <label class="form-check-label" for="publish">publish</label>
+                <label class="custom-control-label" for="publish">Publish</label>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="status" id="draf" v-bind:value="false"
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="draf" name="status" v-bind:value="false"
                   v-model="status">
-                <label class="form-check-label" for="draf">draf</label>
+                <label class="custom-control-label" for="draf">Draf</label>
               </div>
             </div>
             <button class="btn btn-primary rounded-0 mb-3"><i class="fas fa-save"></i> Save</button>
@@ -166,7 +166,7 @@
               var reader = new FileReader()
               reader.onload = function () {
                 var id = 'blobid' + (new Date()).getTime()
-                var blobCache = tinymce.activeEditor.editorUpload.blobCache
+                var blobCache = window.tinymce.activeEditor.editorUpload.blobCache
                 var base64 = reader.result.split(',')[1]
                 var blobInfo = blobCache.create(id, file, base64)
                 blobCache.add(blobInfo)

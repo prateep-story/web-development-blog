@@ -1,6 +1,6 @@
 <template>
   <div id="show">
-    <Navbar/>
+    <Navbar />
     <div class="container">
       <div class="row my-3">
         <div class="col-md-12">
@@ -12,15 +12,22 @@
               <li class="breadcrumb-item active" aria-current="page">{{article.title}}</li>
             </ol>
           </nav>
-
-          <img class="img-fluid rounded-0" v-if="article.imageUrl" :src="article.imageUrl" alt="...">
-          <hr>
-          <h5 class="mt-4">{{article.title}}</h5>
-          <p class="small">{{created}} | {{article.category}}</p>
-          <hr>
-          <p v-html="article.content"></p>
-          <hr>
-    
+          <div class="card border-0 mb-4 animated fadeInUp">
+            <img class="card-img-top img-fluid rounded-0" v-if="article.imageUrl" :src="article.imageUrl" alt="...">
+            <div class="card-body ">
+              <h3 class="card-title">{{article.title}}</h3>
+              <ul class="list-inline text-muted small">
+                <li class="list-inline-item"><i class="far fa-clock"></i>
+                  {{updated}}</li>
+                <li class="list-inline-item"><i class="far fa-folder-open"></i>
+                  {{article.category}}
+                </li>
+              </ul>
+              <p class="card-text animated fadeInUp" v-html="article.content"></p>
+              <router-link :to="{ name: 'index'}" class="btn btn-link text-uppercase text-center animated fadeInUp"><i
+                  class="fas fa-long-arrow-alt-left"></i> Back</router-link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -40,7 +47,7 @@
       return {
         id: '',
         article: [],
-        created: ''
+        updated: ''
       }
     },
     created() {
@@ -52,7 +59,7 @@
           if (doc.exists) {
             this.article = doc.data()
             this.id = doc.id
-            this.created = moment(doc.created).format('LL')
+            this.updated = moment(doc.updated).format('LL')
           }
         })
       }

@@ -3,184 +3,114 @@
         <Navbar />
         <div class="container">
             <div class="row my-3">
-                <div class="col-md-8">
-                    <div class="row my-3 animated fadeInUp">
-                        <div class="col-md-12">
-                            <h5>ABOUT ME</h5>
-                            <p>
-                                My name is Prateep aunaok. A freelance Web Developers at Kamphaeng Phet, Thailand. For
-                                the
-                                past
-                                3 years, I've been Developing Web applications using mostly Laravel & VueJs. I do this
-                                for
-                                a living and love what i do as every day there is something new and exciting to learn.
-                                My
-                                hobbies are surfing the internet and reading blogs. They're all have a lot of knowledge.
-                            </p>
-                            <p>
-                                I would like to have a good job which brings a stable income, have security, a family
-                                and be
-                                able to do some good things that people can remember me by.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row my-3 animated fadeInUp">
-                        <div class="col-md-12">
-                            <h5>EXPERIENCES</h5>
-                            <h6>Administrative Assistant<span class="float-right text-secondary"><small>2017 -
-                                        Present</small></span></h6>
-                            <small class="text-secondary">Sawatpaiboon Rice Mill Co.,Ltd.</small>
-                            <p>Main duties include type or produce reports or correspondence utilizing word processing,
-                                spreadsheet. Managing expenses truck. Compiled and prepared detailed financial
-                                statements,
-                                management reports and journal entries.</p>
-                            <h6>Web Developer<span class="float-right text-secondary"><small>2015-2016</small></span>
-                            </h6>
-                            <small class="text-secondary">Kamphaeng Phet Teacher's Savings Cooperatives Ltd.</small>
-                            <p>During my last semester, I internship at Kamphaeng Phet Teacher's Savings Cooperatives,
-                                Where
-                                I
-                                had a chance to practice coding PHP for website and learned. How to work with
-                                professional
-                                in
-                                the field.</p>
-                        </div>
-                    </div>
-                    <div class="row my-3 animated fadeInUp">
-                        <div class="col-md-12">
-                            <h5>EDUCATION</h5>
-                            <h6>Bachelor of Science (Computer Science)<span
-                                    class="float-right text-secondary"><small>2012 -
-                                        2016</small></span></h6>
-                            <small class="text-secondary">Kampheang Phet Rajabhat University</small>
-                            <p>I graduated from Kampheang Phet Rajabhat University in the Faculty of Science and
-                                Technology,
-                                majoring in Computer Science, with the GPA of 2.51</p>
-                            <h6>Senior High School (Mathematics Science)<span
-                                    class="float-right text-secondary"><small>2009
-                                        -
-                                        2012</small></span></h6>
-                            <small class="text-secondary">Pangsilathongsuksa School</small>
-                            <p>I graduated from Pangsilathongsuksa High School in Mathematics-Science program with the
-                                GPA
-                                of
-                                2.41</p>
-                        </div>
-                    </div>
-                    <div class="row my-3 animated fadeInUp">
-                        <div class="col-md-12">
-                            <h5> PROFICIENCY</h5>
-                            <div class="col-sm-12">
-                                <dl class="row">
-                                    <dt class="col-sm-4 font-weight-normal pl-0">Illustrator &amp; Photoshop</dt>
-                                    <dd class="col-sm-8 mt-1 pr-0">
-                                        <div class="progress rounded-0">
-                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </dd>
-                                    <dt class="col-sm-4 font-weight-normal pl-0">HTML5 &amp; CSS</dt>
-                                    <dd class="col-sm-8 mt-1 pr-0">
-                                        <div class="progress rounded-0">
-                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </dd>
-                                    <dt class="col-sm-4 font-weight-normal pl-0">Javascript &amp; jQuery</dt>
-                                    <dd class="col-sm-8 mt-1 pr-0">
-                                        <div class="progress rounded-0">
-                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                style="width: 50%;" aria-valuenow="50" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </dd>
-                                    <dt class="col-sm-4 font-weight-normal pl-0">Laravel &amp; Lumen</dt>
-                                    <dd class="col-sm-8 mt-1 pr-0">
-                                        <div class="progress rounded-0">
-                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </dd>
-                                    <dt class="col-sm-4 font-weight-normal pl-0">VueJs &amp; Firebase</dt>
-                                    <dd class="col-sm-8 mt-1 pr-0">
-                                        <div class="progress rounded-0">
-                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                style="width: 40%;" aria-valuenow="30" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </dd>
-                                    <dt class="col-sm-4 font-weight-normal pl-0">Bootstrap &amp; Foundation</dt>
-                                    <dd class="col-sm-8 mt-1 pr-0">
-                                        <div class="progress rounded-0">
-                                            <div class="progress-bar bg-secondary" role="progressbar"
-                                                style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-                                                aria-valuemax="100"></div>
-                                        </div>
-                                    </dd>
-                                </dl>
+                <div class="col-md-12">
+                    <div class="card mb-3 border-0">
+                        <div class="row no-gutters">
+                            <div class="col-md-2">
+                                <img src="../assets/avatar.jpg" class="card-img img-fluid rounded-circle animated fadeIn"
+                                    width="200px" alt="...">
+                            </div>
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                    <h3 class="card-title">เกี่ยวกับประทีป</h3>
+                                    <p class="card-text">นายประทีป อุ่นอก (นก) สิ่งมีชีวิตตัวเล็กๆ หัวฟูๆ ผิดคล้ำๆหน่อย
+                                        ดำรงชีวิตบนพื้นโลกแห่งนี้
+                                        ทานข้าวเป็นอาหารหลัก จบการศึกษาคณะวิทยาศาสตร์และเทคโนโลยี
+                                        สาขาวิชาวิทยาการคอมพิวเตอร์
+                                        มหาวิทยาลัยราชภัฏกำแพงเพชร ปัจจุบันเป็นพนักงานธุรการบัญชี ณ
+                                        บริษัทแห่งหนึ่งในจังหวัดกำแพงเพชร
+                                        ชื่นชอบเทคโนโลยี การออกแบบ การเขียนโปรแกรม และการพัฒนาเว็บไซต์เป็นพิเศษ
+                                        รักธรรมชาติ
+                                        แม่น้ำ สายลม แสงแดด และต้นไม้ </p>
+                                        <hr>
+                                    <ul class="socialIcons text-center">
+                                        <li class="facebook"><a href="#"><i
+                                                    class="fab fa-fw fa-facebook-f"></i>Facebook</a></li>
+                                        <li class="twitter"><a href="#"><i class="fab fa-fw fa-twitter"></i>Twitter</a>
+                                        </li>
+                                        <li class="instagram"><a href="#"><i
+                                                    class="fab fa-fw fa-instagram"></i>Instagram</a>
+                                        </li>
+                                        <li class="github"><a href="#"><i class="fab fa-fw fa-github"></i>Github</a>
+                                        </li>
+                                        <li class="resume">
+                                            <router-link :to="{ name: 'resume'}">
+                                                <i class="fas fa-fw fa-user"></i>Resume</router-link>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="right-sidebar">
-                        <div id="avatar">
-                            <img src="../assets/avatar.jpg" class="rounded-circle mx-auto d-block my-3 animated fadeIn" width="200px"
-                                alt="...">
-                            <h3 class="card-title text-center text-uppercase mb-2 animated fadeInUp">Prateep Aunaok</h3>
-                            <h6 class="text-center text-muted mb-3 animated fadeInUp">web developer & designer</h6>
-                            <hr>
-                        </div>
-                        <h5 class="animated fadeInUp">PERSONAL INFORMATION</h5>
-                        <ul class="list-unstyled mb-4 animated fadeInUp">
-                            <li class="mb-2">Address: 321 Village No. 6 Phothong Sub-district, Pangsilathong District,
-                                Kamphaeng
-                                Phet. (Thailand) 62120</li>
-                            <li class="mb-2">Birthday: November 27, 1993</li>
-                            <li class="mb-2">Phone: <a href="tel:+66 85 346 9543"> +66 85 346 9543</a></li>
-                            <li class="mb-2">Email: <a
-                                    href="mailto: prateep_kpru@outlook.com">prateep_kpru@outlook.com</a></li>
-                        </ul>
-                        <h5 class="animated fadeInUp">SKILLS</h5>
-                        <ul class="list-unstyled mb-4 animated fadeInUp">
-                            <li class="mb-2">Typing skills Thai 30 words per minute and Typing skills English 45 words
-                                per
-                                minute.</li>
-                            <li class="mb-2">Proficient in Microsoft Office programs.</li>
-                            <li class="mb-2">Computer repair and knowledge of software</li>
-                        </ul>
-                        <h5 class="animated fadeInUp">HOBBIES</h5>
-                        <ul class="list-unstyled mb-4 animated fadeInUp">
-                            <li class="mb-2">Suring the internet, Reading Blogs, Watching movies</li>
-                        </ul>
-                        <h5 class="animated fadeInUp">MOTTO</h5>
-                        <ul class="list-unstyled mb-4 animated fadeInUp">
-                            <li class="mb-2">The future depends on what we do in the present.</li>
-                        </ul>
-                        <h5 class="animated fadeInUp">REFERENCE</h5>
-                        <ul class="list-unstyled mb-4 animated fadeInUp">
-                            <li class="mb-2">Dr. Nujarin Pathumpong<br><small>Lecturer at Kampheang Phet Rajabhat
-                                    University.</small><br> Email: nujarin_p@kpru.ac.th</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
-        <Footer />
     </div>
 </template>
 
 <script>
     import Navbar from '../components/frontend/Navbarฺ'
-    import Footer from '../components/frontend/Footer'
     export default {
         name: 'about',
         components: {
-            Navbar,
-            Footer
+            Navbar
         }
     }
 </script>
+
+<style scoped>
+    ul.socialIcons {
+        padding: 0;
+    }
+
+    .socialIcons li {
+        background: yellow;
+        list-style: none;
+        display: inline-block;
+        margin: .25rem;
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+
+    .socialIcons li a {
+        display: block;
+        padding: .4em;
+        max-width: 2em;
+        min-width: 2em;
+        height: 2em;
+        white-space: nowrap;
+        line-height: 1.5em;
+        transition: .5s;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .socialIcons li i {
+        margin-right: .5em;
+    }
+
+    .socialIcons li:hover a {
+        max-width: 200px;
+        padding-right: 1em;
+    }
+
+    .socialIcons .facebook {
+        background: #3b5998;
+    }
+
+    .socialIcons .twitter {
+        background: #00aced;
+    }
+
+    .socialIcons .instagram {
+        background: #cd486b;
+    }
+
+    .socialIcons .github {
+        background: #c92228;
+    }
+
+    .socialIcons .resume {
+        background: #666666;
+    }
+</style>

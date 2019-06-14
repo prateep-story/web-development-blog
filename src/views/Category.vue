@@ -47,7 +47,7 @@
     name: 'blog',
     data() {
       return {
-        id: '',
+        category: '',
         search: '',
         articles: []
       }
@@ -57,7 +57,7 @@
     },
     methods: {
       listData() {
-        database.collection('articles').where("status", "==", true).orderBy('updated', 'desc').onSnapshot(
+        database.collection('articles').where("category", "==", this.$route.params.category).orderBy('updated', 'desc').onSnapshot(
           querySnapshot => {
             querySnapshot.forEach((doc) => {
               var data = {
@@ -66,7 +66,7 @@
                 content: doc.data().content,
                 category: doc.data().category,
                 imageUrl: doc.data().imageUrl,
-                updated: moment(doc.updated).format('LL')
+                updated: moment(doc.created).format('LL')
               }
               this.articles.push(data)
             })

@@ -9,18 +9,16 @@
               <div class="card border-0">
                 <img class="card-img-top img-fluid rounded-0" v-if="article.imageUrl" :src="article.imageUrl" alt="...">
                 <div class="card-body px-0">
-                  <h6 class="card-title text-secondary"><i v-if="article.status == true" class="far fa-check-circle text-success"></i><i v-else class="far fa-times-circle"></i> {{article.title}} 
-
-                  </h6>
+                  <h5 class="card-title">{{article.title}} <i v-if="article.status == true" class="far fa-check-circle text-success"></i><i v-else class="far fa-times-circle"></i>
+                  </h5>
                   <div class="d-flex justify-content-between align-items-center">
-                    <small class="text-muted">{{article.created}}</small>
-
+                    <small class="text-muted"><i class="far fa-clock"></i> {{article.created}}</small>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-link btn-sm text-info"
-                        v-on:click="onShow(article.id)">Show</button>
-                      <button type="button" class="btn btn-link btn-sm text-warning"
+                      <button type="button" class="btn btn-link btn-sm text-info text-uppercase"
+                        v-on:click="onShow(article.id)">Preview</button>
+                      <button type="button" class="btn btn-link btn-sm text-warning text-uppercase"
                         v-on:click="onEdit(article.id)">Edit</button>
-                      <button type="button" class="btn btn-link btn-sm text-danger"
+                      <button type="button" class="btn btn-link btn-sm text-danger text-uppercase"
                         v-on:click="onDelete(article.id)">Delete</button>
                     </div>
                   </div>
