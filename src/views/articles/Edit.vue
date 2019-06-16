@@ -87,24 +87,24 @@
         content: '',
         slug: '',
         options: [{
-            text: 'Web Development',
-            value: 'Web Development'
+            text: 'การพัฒนาเว็บ',
+            value: 'การพัฒนาเว็บ'
           },
           {
-            text: 'Web Design',
-            value: 'Web Design'
+            text: 'ออกแบบเว็บไซต์',
+            value: 'ออกแบบเว็บไซต์'
           },
           {
-            text: 'Technology',
-            value: 'Technology'
+            text: 'เทคโนโลยี',
+            value: 'เทคโนโลยี'
           },
           {
-            text: 'Lifestyle',
-            value: 'Lifestyle'
+            text: 'ไลฟ์สไตล์',
+            value: 'ไลฟ์สไตล์'
           },
           {
-            text: 'Uncategorized',
-            value: 'Uncategorized'
+            text: 'ไม่มีหมวดหมู่',
+            value: 'ไม่มีหมวดหมู่'
           },
         ],
         category: '',
