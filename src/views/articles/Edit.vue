@@ -10,7 +10,8 @@
                 <router-link :to="{ name: 'article-list'}">Articles</router-link>
               </li>
               <li class="breadcrumb-item">
-                <router-link :to="{ name: 'show-article', params: { id } }">{{article.title}}</router-link>
+                <router-link :to="{ name: 'show-article', params: {id: article['id'], slug: article['slug']} }">
+                  {{article.title}}</router-link>
               </li>
               <li class="breadcrumb-item active" aria-current="page">Edit</li>
             </ol>
@@ -84,6 +85,7 @@
         article: [],
         title: '',
         content: '',
+        slug: '',
         options: [{
             text: 'Web Development',
             value: 'Web Development'
@@ -210,13 +212,14 @@
       },
       onUpdate() {
         var id = this.id
+        var title = this.article.title
+        var content = this.article.content
+        var slug = this.createSlug(this.article.title)
         var file = this.file
         var filename = this.filename
         var category = this.category
         var status = this.status
         var oldFile = this.article.image
-        var title = this.article.title
-        var content = this.article.content
 
         if (file) {
           storage.ref().child('images/articles/' + oldFile).delete()
@@ -233,6 +236,7 @@
           title: title,
           content: content,
           category: category,
+          slug: slug,
           status: status,
           updated: new Date()
         }).then(function () {
@@ -241,6 +245,16 @@
             name: 'article-list'
           })
         })
+      },
+      createSlug: function (title) {
+        var slug = ''
+        slug = title.toLowerCase().replace(/\s+/g, '-')
+          .replace('%', 'เปอร์เซนต์')
+          .replace(/[^\u0E00-\u0E7F\w-]+/g, '')
+          .replace(/--+/g, '-') 
+          .replace(/^-+/, '')
+          .replace(/-+$/, '')
+        return slug;
       }
     },
     components: {

@@ -82,6 +82,7 @@
         articles: [],
         title: '',
         content: '',
+        slug: '',
         options: [{
             text: 'Web Development',
             value: 'Web Development'
@@ -198,6 +199,7 @@
         var title = this.title
         var content = this.content
         var category = this.category
+        var slug = this.createSlug(this.title)
         var status = this.status
         var file = this.file
         var filename = this.filename
@@ -209,6 +211,7 @@
             databaseRef.set({
               title: title,
               content: content,
+              slug: slug,
               category: category,
               status: status,
               image: filename,
@@ -223,6 +226,16 @@
             })
           })
         })
+      },
+      createSlug: function (title) {
+        var slug = ''
+        slug = title.toLowerCase().replace(/\s+/g, '-')
+          .replace('%', 'เปอร์เซนต์')
+          .replace(/[^\u0E00-\u0E7F\w-]+/g, '')
+          .replace(/--+/g, '-') 
+          .replace(/^-+/, '')
+          .replace(/-+$/, '')
+        return slug;
       }
     },
     components: {

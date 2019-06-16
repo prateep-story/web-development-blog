@@ -7,7 +7,7 @@
                     <div class="card mb-3 border-0">
                         <div class="row no-gutters">
                             <div class="col-md-2">
-                                <img src="../assets/avatar.jpg" class="card-img img-fluid rounded-circle animated fadeIn"
+                                <img src="../assets/avatar.jpg" class="card-img img-fluid rounded-circle"
                                     width="200px" alt="...">
                             </div>
                             <div class="col-md-10">

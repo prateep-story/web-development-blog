@@ -12,7 +12,7 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title mb-0">
-                    <router-link :to="{ name: 'read', params: {id: article['id']} }">
+                    <router-link :to="{ name: 'read', params: {id: article['id'], slug: article['slug']} }">
                       {{article.title}}</router-link>
                   </h5>
                   <ul class="list-inline text-muted small">
@@ -32,7 +32,7 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-4">
-              <button class="btn btn-outline-primary btn-block rounded-0 text-uppercase animated fadeInUp"
+              <button class="btn btn-outline-primary btn-block rounded-0 text-uppercase"
                 v-if="articles.length" v-on:click="loadMore()">
                 Load more <i class="fas fa-caret-down"></i>
               </button>

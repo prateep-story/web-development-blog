@@ -36,7 +36,7 @@ const router = new Router({
       component: Category
     },
     {
-      path: '/read/:id',
+      path: '/read/:slug',
       name: 'read',
       component: Read
     },
@@ -72,7 +72,7 @@ const router = new Router({
       }
     },
     {
-      path: '/articles/edit/:id',
+      path: '/articles/edit/:slug',
       name: 'edit-article',
       component: EditArticle,
       meta: {
@@ -80,7 +80,7 @@ const router = new Router({
       }
     },
     {
-      path: '/articles/show/:id',
+      path: '/articles/show/:slug',
       name: 'show-article',
       component: ShowArticle,
       meta: {

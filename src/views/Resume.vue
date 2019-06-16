@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row my-3">
                 <div class="col-md-8">
-                    <div class="row my-3 animated fadeInUp">
+                    <div class="row my-3">
                         <div class="col-md-12">
                             <h4>ABOUT ME</h4>
                             <p>
@@ -24,7 +24,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="row my-3 animated fadeInUp">
+                    <div class="row my-3">
                         <div class="col-md-12">
                             <h4>EXPERIENCES</h4>
                             <h6>Administrative Assistant<span class="float-right text-secondary"><small>2017 -
@@ -46,7 +46,7 @@
                                 the field.</p>
                         </div>
                     </div>
-                    <div class="row my-3 animated fadeInUp">
+                    <div class="row my-3">
                         <div class="col-md-12">
                             <h4>EDUCATION</h4>
                             <h6>Bachelor of Science (Computer Science)<span
@@ -67,7 +67,7 @@
                                 2.41</p>
                         </div>
                     </div>
-                    <div class="row my-3 animated fadeInUp">
+                    <div class="row my-3">
                         <div class="col-md-12">
                             <h4> PROFICIENCY</h4>
                             <div class="col-sm-12">
@@ -130,12 +130,12 @@
                         <div id="avatar">
                             <img src="../assets/avatar.jpg" class="rounded-circle mx-auto d-block my-3 animated fadeIn" width="200px"
                                 alt="...">
-                            <h4 class="card-title text-center text-uppercase mb-2 animated fadeInUp">Prateep Aunaok</h4>
-                            <h6 class="text-center text-muted mb-3 animated fadeInUp">web developer & designer</h6>
+                            <h4 class="card-title text-center text-uppercase mb-2">Prateep Aunaok</h4>
+                            <h6 class="text-center text-muted mb-3">web developer & designer</h6>
                             <hr>
                         </div>
                         <h4 class="animated fadeInUp">PERSONAL INFORMATION</h4>
-                        <ul class="list-unstyled mb-4 animated fadeInUp">
+                        <ul class="list-unstyled mb-4">
                             <li class="mb-2">Address: 321 Village No. 6 Phothong Sub-district, Pangsilathong District,
                                 Kamphaeng
                                 Phet. (Thailand) 62120</li>
@@ -145,7 +145,7 @@
                                     href="mailto: prateep_kpru@outlook.com">prateep_kpru@outlook.com</a></li>
                         </ul>
                         <h4 class="animated fadeInUp">SKILLS</h4>
-                        <ul class="list-unstyled mb-4 animated fadeInUp">
+                        <ul class="list-unstyled mb-4">
                             <li class="mb-2">Typing skills Thai 30 words per minute and Typing skills English 45 words
                                 per
                                 minute.</li>
@@ -153,15 +153,15 @@
                             <li class="mb-2">Computer repair and knowledge of software</li>
                         </ul>
                         <h4 class="animated fadeInUp">HOBBIES</h4>
-                        <ul class="list-unstyled mb-4 animated fadeInUp">
+                        <ul class="list-unstyled mb-4">
                             <li class="mb-2">Suring the internet, Reading Blogs, Watching movies</li>
                         </ul>
                         <h4 class="animated fadeInUp">MOTTO</h4>
-                        <ul class="list-unstyled mb-4 animated fadeInUp">
+                        <ul class="list-unstyled mb-4">
                             <li class="mb-2">The future depends on what we do in the present.</li>
                         </ul>
                         <h4 class="animated fadeInUp">REFERENCE</h4>
-                        <ul class="list-unstyled mb-4 animated fadeInUp">
+                        <ul class="list-unstyled mb-4">
                             <li class="mb-2">Dr. Nujarin Pathumpong<br><small>Lecturer at Kampheang Phet Rajabhat
                                     University.</small><br> Email: nujarin_p@kpru.ac.th</li>
                         </ul>

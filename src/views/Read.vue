@@ -12,7 +12,7 @@
               <li class="breadcrumb-item active" aria-current="page">{{article.title}}</li>
             </ol>
           </nav>
-          <div class="card border-0 mb-4 animated fadeInUp">
+          <div class="card border-0 mb-4">
             <img class="card-img-top img-fluid rounded-0" v-if="article.imageUrl" :src="article.imageUrl" alt="...">
             <div class="card-body ">
               <h3 class="card-title">{{article.title}}</h3>
@@ -24,8 +24,8 @@
                     {{article.category}}</router-link>
                 </li>
               </ul>
-              <p class="card-text animated fadeInUp" v-html="article.content"></p>
-              <router-link :to="{ name: 'blog'}" class="btn btn-link text-uppercase text-center animated fadeInUp"><i
+              <p class="card-text" v-html="article.content"></p>
+              <router-link :to="{ name: 'blog'}" class="btn btn-link text-uppercase text-center"><i
                   class="fas fa-long-arrow-alt-left"></i> Back</router-link>
             </div>
           </div>
@@ -47,6 +47,7 @@
     data() {
       return {
         id: '',
+        slug: '',
         article: [],
         updated: ''
       }
