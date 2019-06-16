@@ -31,12 +31,12 @@ const router = new Router({
       component: Blog
     },
     {
-      path: '/category',
+      path: '/category/:category',
       name: 'category',
       component: Category
     },
     {
-      path: '/read',
+      path: '/read/:id',
       name: 'read',
       component: Read
     },
@@ -72,7 +72,7 @@ const router = new Router({
       }
     },
     {
-      path: '/articles/edit',
+      path: '/articles/edit/:id',
       name: 'edit-article',
       component: EditArticle,
       meta: {
@@ -80,7 +80,7 @@ const router = new Router({
       }
     },
     {
-      path: '/articles/show',
+      path: '/articles/show/:id',
       name: 'show-article',
       component: ShowArticle,
       meta: {

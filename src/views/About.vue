@@ -24,14 +24,14 @@
                                         แม่น้ำ สายลม แสงแดด และต้นไม้ </p>
                                         <hr>
                                     <ul class="socialIcons text-center">
-                                        <li class="facebook"><a href="#"><i
+                                        <li class="facebook"><a href="https://www.facebook.com/prateep.aunaok" target="_blank"><i
                                                     class="fab fa-fw fa-facebook-f"></i>Facebook</a></li>
-                                        <li class="twitter"><a href="#"><i class="fab fa-fw fa-twitter"></i>Twitter</a>
+                                        <li class="twitter"><a href="https://twitter.com/prateep_aunaok" target="_blank"><i class="fab fa-fw fa-twitter"></i>Twitter</a>
                                         </li>
-                                        <li class="instagram"><a href="#"><i
+                                        <li class="instagram"><a href="https://www.instagram.com/prateep.me" target="_blank"><i
                                                     class="fab fa-fw fa-instagram"></i>Instagram</a>
                                         </li>
-                                        <li class="github"><a href="#"><i class="fab fa-fw fa-github"></i>Github</a>
+                                        <li class="github"><a href="https://github.com/prateep-story" target="_blank"><i class="fab fa-fw fa-github"></i>Github</a>
                                         </li>
                                         <li class="resume">
                                             <router-link :to="{ name: 'resume'}">
