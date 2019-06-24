@@ -19,14 +19,6 @@
                   required>
               </div>
               <div class="form-group">
-                <select class="form-control rounded-0" id="category" v-model="category">
-                  <option selected disabled>Category</option>
-                  <option v-for="option in options" v-bind:value="option.value" v-bind:key="option.value">
-                    {{ option.text }}
-                  </option>
-                </select>
-              </div>
-              <div class="form-group">
                 <div class="row">
                   <div v-if="preview" class="col-md-12">
                     <figure class="figure">
@@ -83,28 +75,6 @@
         title: '',
         content: '',
         slug: '',
-        options: [{
-            text: 'การพัฒนาเว็บ',
-            value: 'การพัฒนาเว็บ'
-          },
-          {
-            text: 'ออกแบบเว็บไซต์',
-            value: 'ออกแบบเว็บไซต์'
-          },
-          {
-            text: 'เทคโนโลยี',
-            value: 'เทคโนโลยี'
-          },
-          {
-            text: 'ไลฟ์สไตล์',
-            value: 'ไลฟ์สไตล์'
-          },
-          {
-            text: 'ไม่มีหมวดหมู่',
-            value: 'ไม่มีหมวดหมู่'
-          },
-        ],
-        category: 'Category',
         status: true,
         file: '',
         filename: '',
@@ -198,11 +168,11 @@
       onStore() {
         var title = this.title
         var content = this.content
-        var category = this.category
-        var slug = this.createSlug(this.title)
         var status = this.status
         var file = this.file
         var filename = this.filename
+        var slug = this.createSlug(this.title)
+        var timestamp = firebase.firestore.FieldValue.serverTimestamp()
 
         var storageRef = storage.ref('images/articles/' + filename)
         storageRef.put(file).then((snapshot) => {
@@ -211,15 +181,14 @@
             databaseRef.set({
               title: title,
               content: content,
-              slug: slug,
-              category: category,
               status: status,
               image: filename,
               imageUrl: downloadURL,
-              created: new Date(),
-              updated: new Date()
+              created: timestamp,
+              updated: timestamp,
+              slug: slug
             }).then(function () {
-              alert('Record successfully created.')
+              alert('Document successfully written!')
               router.push({
                 name: 'article-list'
               })

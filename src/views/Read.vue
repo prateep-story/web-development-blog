@@ -19,10 +19,6 @@
               <ul class="list-inline text-muted small">
                 <li class="list-inline-item"><i class="far fa-clock"></i>
                   {{updated}}</li>
-                <li class="list-inline-item"><i class="far fa-folder-open"></i>
-                  <router-link :to="{ name: 'category', params: {category: article['category']} }">
-                    {{article.category}}</router-link>
-                </li>
               </ul>
               <p class="card-text" v-html="article.content"></p>
               <router-link :to="{ name: 'blog'}" class="btn btn-link text-uppercase text-center"><i
@@ -46,25 +42,17 @@
     name: 'read',
     data() {
       return {
-        id: '',
-        slug: '',
         article: [],
         updated: ''
       }
     },
     created() {
-      this.onShow()
-    },
-    methods: {
-      onShow() {
-        database.collection('articles').doc(this.$route.params.id).get().then((doc) => {
-          if (doc.exists) {
-            this.article = doc.data()
-            this.id = doc.id
-            this.updated = moment(doc.updated).format('LL')
-          }
-        })
-      }
+      database.collection('articles').doc(this.$route.params.id).get().then((doc) => {
+        if (doc.exists) {
+          this.article = doc.data()
+          this.updated = moment(doc.updated).format('LL')
+        }
+      })
     },
     components: {
       Navbar

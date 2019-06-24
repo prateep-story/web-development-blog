@@ -9,10 +9,10 @@
               <div class="card border-0">
                 <img class="card-img-top img-fluid rounded-0" v-if="article.imageUrl" :src="article.imageUrl" alt="...">
                 <div class="card-body px-0">
-                  <h5 class="card-title">{{article.title}} <i v-if="article.status == true" class="far fa-check-circle text-success"></i><i v-else class="far fa-times-circle"></i>
+                  <h5 class="card-title">{{article.title}} 
                   </h5>
                   <div class="d-flex justify-content-between align-items-center">
-                    <small class="text-muted"><i class="far fa-clock"></i> {{article.created}}</small>
+                    <small class="text-muted"><i class="far fa-clock"></i> {{article.created}} <i v-if="article.status == true" class="far fa-check-circle text-success"></i><i v-else class="far fa-times-circle"></i></small>
                     <div class="btn-group" role="group" aria-label="Basic example">
                       <button type="button" class="btn btn-link btn-sm text-info text-uppercase"
                         v-on:click="onShow(article.id, article.slug)">Preview</button>
@@ -142,7 +142,7 @@
             var image = doc.data().image
             storage.ref().child('images/articles/' + image).delete()
             database.collection('articles').doc(id).delete().then(function () {
-              alert('Record successfully deleted')
+              alert('Document successfully deleted!')
               location.reload()
               router.push({
                 name: 'article-list'

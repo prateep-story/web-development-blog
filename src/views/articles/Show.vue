@@ -19,9 +19,6 @@
               <ul class="list-inline text-muted small">
                 <li class="list-inline-item"><i class="far fa-clock"></i>
                   {{updated}}</li>
-                <li class="list-inline-item"><i class="far fa-folder-open"></i>
-                  {{article.category}}
-                </li>
               </ul>
               <p class="card-text animated fadeInUp" v-html="article.content"></p>
               <router-link :to="{ name: 'article-list'}" class="btn btn-link text-uppercase text-center animated fadeInUp"><i

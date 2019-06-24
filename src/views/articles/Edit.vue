@@ -22,14 +22,6 @@
                 placeholder="หัวข้อ" required>
             </div>
             <div class="form-group">
-              <select class="form-control rounded-0" id="category" v-model="category">
-                <option selected disabled>Category</option>
-                <option v-for="option in options" v-bind:value="option.value" v-bind:key="option.value">
-                  {{ option.text }}
-                </option>
-              </select>
-            </div>
-            <div class="form-group">
               <div class="row">
                 <div v-if="article.imageUrl" class="col-md-12">
                   <figure class="figure">
@@ -86,28 +78,6 @@
         title: '',
         content: '',
         slug: '',
-        options: [{
-            text: 'การพัฒนาเว็บ',
-            value: 'การพัฒนาเว็บ'
-          },
-          {
-            text: 'ออกแบบเว็บไซต์',
-            value: 'ออกแบบเว็บไซต์'
-          },
-          {
-            text: 'เทคโนโลยี',
-            value: 'เทคโนโลยี'
-          },
-          {
-            text: 'ไลฟ์สไตล์',
-            value: 'ไลฟ์สไตล์'
-          },
-          {
-            text: 'ไม่มีหมวดหมู่',
-            value: 'ไม่มีหมวดหมู่'
-          },
-        ],
-        category: '',
         status: '',
         file: '',
         filename: '',
@@ -184,19 +154,15 @@
       }
     },
     created() {
-      this.onEdit()
+      var databaseRef = database.collection('articles')
+      databaseRef.doc(this.$route.params.id).get().then((doc) => {
+        if (doc.exists) {
+          this.article = doc.data()
+          this.status = doc.data().status
+        }
+      })
     },
     methods: {
-      onEdit() {
-        var databaseRef = database.collection('articles')
-        databaseRef.doc(this.$route.params.id).get().then((doc) => {
-          if (doc.exists) {
-            this.article = doc.data()
-            this.category = doc.data().category
-            this.status = doc.data().status
-          }
-        })
-      },
       onSelectImage(event) {
         var file = event.target.files[0]
         var extension = file.name.split('.').pop()
@@ -214,12 +180,12 @@
         var id = this.id
         var title = this.article.title
         var content = this.article.content
-        var slug = this.createSlug(this.article.title)
         var file = this.file
         var filename = this.filename
-        var category = this.category
         var status = this.status
         var oldFile = this.article.image
+        var slug = this.createSlug(this.article.title)
+        var timestamp = firebase.firestore.FieldValue.serverTimestamp()
 
         if (file) {
           storage.ref().child('images/articles/' + oldFile).delete()
@@ -235,12 +201,11 @@
         database.collection('articles').doc(id).update({
           title: title,
           content: content,
-          category: category,
           slug: slug,
           status: status,
-          updated: new Date()
+          updated: timestamp
         }).then(function () {
-          alert('Record successfully updated.')
+          alert('Document successfully updated!')
           router.push({
             name: 'article-list'
           })
@@ -251,7 +216,7 @@
         slug = title.toLowerCase().replace(/\s+/g, '-')
           .replace('%', 'เปอร์เซนต์')
           .replace(/[^\u0E00-\u0E7F\w-]+/g, '')
-          .replace(/--+/g, '-') 
+          .replace(/--+/g, '-')
           .replace(/^-+/, '')
           .replace(/-+$/, '')
         return slug;

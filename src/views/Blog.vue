@@ -19,15 +19,14 @@
           <div class="card border-0 mb-4">
             <img class="card-img-top img-fluid rounded-0" v-if="article.imageUrl" :src="article.imageUrl" alt="...">
             <div class="card-body px-0">
-              <h5 class="card-title"><router-link :to="{ name: 'read', params: {id: article['id'], slug: article['slug']} }" >{{article.title}}</router-link></h5>
-                                <ul class="list-inline text-muted small">
-                    <li class="list-inline-item"><i class="far fa-clock"></i>
-                      {{article.updated}}</li>
-                    <li class="list-inline-item"><i class="far fa-folder-open"></i>
-                      <router-link :to="{ name: 'category', params: {category: article['category']} }">
-                        {{article.category}}</router-link>
-                    </li>
-                  </ul>
+              <h5 class="card-title">
+                <router-link :to="{ name: 'read', params: {id: article['id'], slug: article['slug']} }">
+                  {{article.title}}</router-link>
+              </h5>
+              <ul class="list-inline text-muted small">
+                <li class="list-inline-item"><i class="far fa-clock"></i>
+                  {{article.updated}}</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -47,31 +46,25 @@
     name: 'blog',
     data() {
       return {
-        id: '',
         search: '',
         articles: []
       }
     },
     created() {
-      this.listData()
-    },
-    methods: {
-      listData() {
-        database.collection('articles').where("status", "==", true).orderBy('updated', 'desc').onSnapshot(
-          querySnapshot => {
-            querySnapshot.forEach((doc) => {
-              var data = {
-                id: doc.id,
-                title: doc.data().title,
-                content: doc.data().content,
-                category: doc.data().category,
-                imageUrl: doc.data().imageUrl,
-                updated: moment(doc.updated).format('LL')
-              }
-              this.articles.push(data)
-            })
+      database.collection('articles').where("status", "==", true).orderBy('updated', 'desc').onSnapshot(
+        querySnapshot => {
+          querySnapshot.forEach((doc) => {
+            var data = {
+              id: doc.id,
+              title: doc.data().title,
+              content: doc.data().content,
+              slug: doc.data().slug,
+              imageUrl: doc.data().imageUrl,
+              updated: moment(doc.updated).format('LL')
+            }
+            this.articles.push(data)
           })
-      }
+        })
     },
     computed: {
       filteredList() {

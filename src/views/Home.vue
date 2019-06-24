@@ -12,19 +12,14 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title mb-0">
-                    <router-link :to="{ name: 'read', params: {id: article['id'], slug: article['slug']} }">
+                    <router-link :to="{ name: 'read', params: {id: article.id, slug: article.slug} }">
                       {{article.title}}</router-link>
                   </h5>
                   <ul class="list-inline text-muted small">
                     <li class="list-inline-item"><i class="far fa-clock"></i>
                       {{article.updated}}</li>
-                    <li class="list-inline-item"><i class="far fa-folder-open"></i>
-                      <router-link :to="{ name: 'category', params: {category: article['category']} }">
-                        {{article.category}}</router-link>
-                    </li>
                   </ul>
-                  <hr>
-                  <p class="card-text" v-html="article.content.substring(0,300)+'...'"></p>
+                  <p class="card-text" v-html="article.content.substring(0,350)+'...'"></p>
 
                 </div>
               </div>

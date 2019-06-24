@@ -1,5 +1,5 @@
 <template>
-  <section id="sign-in">
+  <section id="login">
     <div class="row justify-content-center">
       <div class="col-md-3">
         <form class="m-5" v-on:submit.prevent="onLogin">
@@ -36,7 +36,7 @@
   import router from '../router'
 
   export default {
-    name: 'SignIn',
+    name: 'login',
     data: function () {
       return {
         email: '',
@@ -46,7 +46,7 @@
     methods: {
       onLogin() {
         firebase.auth().signInWithEmailAndPassword(this.email.trim(), this.password).then(function () {
-          alert('Welcome!')
+          alert('Welcome to blog management!')
           router.push({
             name: 'article-list'
           })

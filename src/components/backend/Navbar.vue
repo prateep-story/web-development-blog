@@ -3,9 +3,9 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div class="container">
                 <div class="navbar-brand">
-                    <img src="../../assets/logo.png" width="24" height="24" class="d-inline-block align-top img-fluid"
-                        alt="">
-                    <strong> Blog Management</strong>
+                <img src="../../assets/logo.png" width="24" height="24" class="d-inline-block align-top img-fluid mr-1"
+                    alt="">
+                    <span class="d-inline-block my-1"><strong>RATEEP.me</strong><small>จัดการบล็อกของฉัน</small></span>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

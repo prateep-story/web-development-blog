@@ -4,7 +4,7 @@
             <router-link class="navbar-brand" :to="{name: 'home'}">
                 <img src="../../assets/logo.png" width="24" height="24" class="d-inline-block align-top img-fluid mr-1"
                     alt="">
-                <strong>RATEEP.me</strong>
+                    <span class="d-inline-block my-1"><strong>RATEEP.me</strong><small>บันทึกของนายประทีป</small></span>
             </router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
