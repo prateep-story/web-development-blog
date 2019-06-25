@@ -15,9 +15,9 @@
                     <small class="text-muted"><i class="far fa-clock"></i> {{article.created}} <i v-if="article.status == true" class="far fa-check-circle text-success"></i><i v-else class="far fa-times-circle"></i></small>
                     <div class="btn-group" role="group" aria-label="Basic example">
                       <button type="button" class="btn btn-link btn-sm text-info text-uppercase"
-                        v-on:click="onShow(article.id, article.slug)">Preview</button>
+                        v-on:click="onShow(article.id)">Preview</button>
                       <button type="button" class="btn btn-link btn-sm text-warning text-uppercase"
-                        v-on:click="onEdit(article.id, article.slug)">Edit</button>
+                        v-on:click="onEdit(article.id)">Edit</button>
                       <button type="button" class="btn btn-link btn-sm text-danger text-uppercase"
                         v-on:click="onDelete(article.id)">Delete</button>
                     </div>
@@ -55,7 +55,6 @@
     data() {
       return {
         id: '',
-        slug: '',
         articles: [],
         paging: {
           article_per_page: 6,
@@ -117,21 +116,19 @@
           })
         })
       },
-      onEdit(id,slug) {
+      onEdit(id) {
         router.push({
           name: 'edit-article',
           params: {
-            id: id,
-            slug: slug
+            id: id
           }
         })
       },
-      onShow(id,slug) {
+      onShow(id) {
         router.push({
           name: 'show-article',
           params: {
-            id: id,
-            slug: slug
+            id: id
           }
         })
       },

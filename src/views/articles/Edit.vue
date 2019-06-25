@@ -10,7 +10,7 @@
                 <router-link :to="{ name: 'article-list'}">Articles</router-link>
               </li>
               <li class="breadcrumb-item">
-                <router-link :to="{ name: 'show-article', params: {id: article['id'], slug: article['slug']} }">
+                <router-link :to="{ name: 'show-article', params: {id: article['id']} }">
                   {{article.title}}</router-link>
               </li>
               <li class="breadcrumb-item active" aria-current="page">Edit</li>
@@ -77,7 +77,6 @@
         article: [],
         title: '',
         content: '',
-        slug: '',
         status: '',
         file: '',
         filename: '',
@@ -184,7 +183,6 @@
         var filename = this.filename
         var status = this.status
         var oldFile = this.article.image
-        var slug = this.createSlug(this.article.title)
         var timestamp = firebase.firestore.FieldValue.serverTimestamp()
 
         if (file) {
@@ -201,7 +199,6 @@
         database.collection('articles').doc(id).update({
           title: title,
           content: content,
-          slug: slug,
           status: status,
           updated: timestamp
         }).then(function () {
@@ -210,16 +207,6 @@
             name: 'article-list'
           })
         })
-      },
-      createSlug: function (title) {
-        var slug = ''
-        slug = title.toLowerCase().replace(/\s+/g, '-')
-          .replace('%', 'เปอร์เซนต์')
-          .replace(/[^\u0E00-\u0E7F\w-]+/g, '')
-          .replace(/--+/g, '-')
-          .replace(/^-+/, '')
-          .replace(/-+$/, '')
-        return slug;
       }
     },
     components: {

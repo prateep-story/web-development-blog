@@ -177,7 +177,7 @@
         var storageRef = storage.ref('images/articles/' + filename)
         storageRef.put(file).then((snapshot) => {
           snapshot.ref.getDownloadURL().then((downloadURL) => {
-            var databaseRef = database.collection('articles').doc()
+            var databaseRef = database.collection('articles').doc(slug)
             databaseRef.set({
               title: title,
               content: content,
@@ -186,7 +186,6 @@
               imageUrl: downloadURL,
               created: timestamp,
               updated: timestamp,
-              slug: slug
             }).then(function () {
               alert('Document successfully written!')
               router.push({

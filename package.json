@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@tinymce/tinymce-vue": "^2.0.0",
-    "firebase": "^5.9.0",
+    "firebase": "^5.11.1",
     "moment": "^2.24.0",
     "vue": "^2.6.10",
     "vue-router": "^3.0.1"

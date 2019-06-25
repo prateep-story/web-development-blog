@@ -20,7 +20,7 @@
             <img class="card-img-top img-fluid rounded-0" v-if="article.imageUrl" :src="article.imageUrl" alt="...">
             <div class="card-body px-0">
               <h5 class="card-title">
-                <router-link :to="{ name: 'read', params: {id: article['id'], slug: article['slug']} }">
+                <router-link :to="{ name: 'read', params: {id: article.id} }">
                   {{article.title}}</router-link>
               </h5>
               <ul class="list-inline text-muted small">
@@ -58,7 +58,6 @@
               id: doc.id,
               title: doc.data().title,
               content: doc.data().content,
-              slug: doc.data().slug,
               imageUrl: doc.data().imageUrl,
               updated: moment(doc.updated).format('LL')
             }

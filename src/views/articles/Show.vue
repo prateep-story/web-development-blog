@@ -21,10 +21,14 @@
                   {{updated}}</li>
               </ul>
               <p class="card-text animated fadeInUp" v-html="article.content"></p>
-              <router-link :to="{ name: 'article-list'}" class="btn btn-link text-uppercase text-center animated fadeInUp"><i
-                  class="fas fa-long-arrow-alt-left"></i> Back</router-link>
             </div>
           </div>
+        </div>
+      </div>
+            <div class="row justify-content-center my-3">
+        <div class="col-md-2">
+          <router-link :to="{ name: 'article-list'}" class="btn btn-outline-primary btn-block rounded-0 text-uppercase"><i
+              class="fas fa-long-arrow-alt-left"></i> Back</router-link>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title mb-0">
-                    <router-link :to="{ name: 'read', params: {id: article.id, slug: article.slug} }">
+                    <router-link :to="{ name: 'read', params: {id: article.id} }">
                       {{article.title}}</router-link>
                   </h5>
                   <ul class="list-inline text-muted small">

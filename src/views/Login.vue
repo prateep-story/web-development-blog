@@ -1,7 +1,7 @@
 <template>
   <section id="login">
     <div class="row justify-content-center">
-      <div class="col-md-3">
+      <div class="col-md-3 col-12">
         <form class="m-5" v-on:submit.prevent="onLogin">
           <div class="text-center mb-3">
             <img class="mb-3 img-fluid" src="../assets/logo.png" alt="" width="85">
