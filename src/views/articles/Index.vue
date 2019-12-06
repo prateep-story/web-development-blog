@@ -138,17 +138,16 @@
           database.collection('articles').doc(id).get().then((doc) => {
             var image = doc.data().image
             storage.ref().child('images/articles/' + image).delete()
-            database.collection('articles').doc(id).delete().then(function () {
+            database.collection('articles').doc(id).delete()
+            .then(function () {
               alert('Document successfully deleted!')
-              location.reload()
+              // location.reload()
               router.push({
                 name: 'article-list'
               })
             })
-
           })
         }
-
       },
       onSingOut() {
         firebase.auth().signOut().then(function () {

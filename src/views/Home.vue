@@ -17,7 +17,7 @@
                   </h5>
                   <ul class="list-inline text-muted small">
                     <li class="list-inline-item"><i class="far fa-clock"></i>
-                      {{article.updated}}</li>
+                      {{article.created}}</li>
                   </ul>
                   <p class="card-text" v-html="article.content.substring(0,350)+'...'"></p>
 
@@ -73,7 +73,6 @@
         if (this.paging.end) {
           return
         }
-
         this.paging.loading = true
         this.handleQuestions(this.ref.articlesNext).then((documentSnapshots) => {
           this.paging.loading = false
@@ -94,7 +93,7 @@
             documentSnapshots.forEach((doc) => {
               let article = doc.data()
               article.id = doc.id
-              article.updated = moment(doc.created).format('LL')
+              article.created = new Date(doc.data().created)
               this.articles.push(article)
             })
 
