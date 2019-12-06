@@ -3,7 +3,7 @@
         <Navbar />
         <div class="container">
             <div class="row my-3">
-                <div class="col-md-8">
+                <div class="col-md-8 order-2">
                     <div class="row my-3">
                         <div class="col-md-12">
                             <h4>ABOUT ME</h4>
@@ -125,7 +125,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 order-1">
                     <div class="right-sidebar">
                         <div id="avatar">
                             <img src="../assets/avatar.jpg" class="rounded-circle mx-auto d-block my-3 animated fadeIn" width="200px"

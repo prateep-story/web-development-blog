@@ -33,7 +33,7 @@
               <div class="custom-file">
                 <input type="file" class="custom-file-input" id="file" @change="onSelectImage">
                 <label class="custom-file-label rounded-0" for="file"><span v-if="filename">{{file.name}}</span> <span
-                    v-else>Choose image... </span> </label>
+                    v-else>Choose image... <small>1200 X 628 px</small></span> </label>
               </div>
             </div>
             <div class="form-group">

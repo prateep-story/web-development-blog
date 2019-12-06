@@ -12,14 +12,17 @@
                   <h5 class="card-title">{{article.title}} 
                   </h5>
                   <div class="d-flex justify-content-between align-items-center">
-                    <small class="text-muted"><i class="far fa-clock"></i> {{article.created}} <i v-if="article.status == true" class="far fa-check-circle text-success"></i><i v-else class="far fa-times-circle"></i></small>
+                    <small class="text-muted"><i class="far fa-clock"></i> {{article.created}}</small>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-link btn-sm text-info text-uppercase"
-                        v-on:click="onShow(article.id)">Preview</button>
+                      <button type="button" class="btn btn-link btn-sm text-uppercase"
+                        v-on:click="onShow(article.id)">
+                        <i v-if="article.status == true" class="far fa-eye text-success"></i>
+                        <i v-else class="far fa-eye-slash text-secondary"></i>
+                      </button>
                       <button type="button" class="btn btn-link btn-sm text-warning text-uppercase"
-                        v-on:click="onEdit(article.id)">Edit</button>
+                        v-on:click="onEdit(article.id)"><i class="far fa-edit"></i></button>
                       <button type="button" class="btn btn-link btn-sm text-danger text-uppercase"
-                        v-on:click="onDelete(article.id)">Delete</button>
+                        v-on:click="onDelete(article.id)"><i class="far fa-trash-alt"></i></button>
                     </div>
                   </div>
                 </div>
@@ -141,10 +144,10 @@
             database.collection('articles').doc(id).delete()
             .then(function () {
               alert('Document successfully deleted!')
-              // location.reload()
-              router.push({
-                name: 'article-list'
-              })
+              location.reload()
+              // router.push({
+              //   name: 'article-list'
+              // })
             })
           })
         }
