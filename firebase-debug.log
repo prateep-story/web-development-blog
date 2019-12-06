@@ -1,0 +1,25 @@
+[debug] [2019-12-06T03:08:01.234Z] ----------------------------------------------------------------------
+[debug] [2019-12-06T03:08:01.261Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\prate\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-12-06T03:08:01.261Z] CLI Version:   7.9.0
+[debug] [2019-12-06T03:08:01.261Z] Platform:      win32
+[debug] [2019-12-06T03:08:01.261Z] Node Version:  v10.15.1
+[debug] [2019-12-06T03:08:01.327Z] Time:          Fri Dec 06 2019 10:08:01 GMT+0700 (GMT+07:00)
+[debug] [2019-12-06T03:08:01.328Z] ----------------------------------------------------------------------
+[debug] [2019-12-06T03:08:01.328Z] 
+[debug] [2019-12-06T03:08:01.371Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-12-06T03:08:01.373Z] > authorizing via signed-in user
+[debug] [2019-12-06T03:08:01.373Z] [iam] checking project prateep-story for permissions ["firebase.projects.get"]
+[debug] [2019-12-06T03:08:01.375Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/prateep-story:testIamPermissions  
+
+[debug] [2019-12-06T03:08:02.928Z] <<< HTTP RESPONSE 200
+[debug] [2019-12-06T03:08:02.930Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/prateep-story  
+ 
+[debug] [2019-12-06T03:08:03.424Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\xampp\htdocs\web-development-blog'...
+[info] 
+[debug] [2019-12-06T03:08:03.448Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/prateep-story/webApps/-/config  
+ 
+[debug] [2019-12-06T03:08:04.393Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist
+[info] +  hosting: Local server: http://localhost:5000

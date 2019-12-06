@@ -2,11 +2,10 @@
     <div id="navbar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div class="container">
-                <div class="navbar-brand">
-                <img src="../../assets/logo.png" width="24" height="24" class="d-inline-block align-top img-fluid mr-1"
-                    alt="">
-                    <span class="d-inline-block my-1"><strong>RATEEP.me</strong><small>จัดการบล็อกของฉัน</small></span>
-                </div>
+                <router-link class="navbar-brand" :to="{name: 'article-list'}">
+                    <img src="../../assets/logo.png" width="24" height="24" class="d-inline-block align-top img-fluid mr-1" alt="">
+                    <span class="d-inline-block my-1"><strong>RATEEP.me</strong><small>บล็อกของฉัน</small></span>
+                </router-link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                     aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
